@@ -1,0 +1,437 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Hello World</title>
+        <script>
+
+
+            window.onload = function () {
+     document.getElementById("num").value =Number( localStorage.getItem("num")) + 1 ;
+ }
+
+             function coun() {
+               
+       
+                
+                var num1 =document.getElementById("num").value ;
+                localStorage.setItem('num', num1);
+                num1++;
+                document.getElementById("num").value = num1;
+          
+             }
+
+             function res() {
+                 localStorage.clear();
+                 document.getElementById("num").value = 0;
+             }
+            
+            
+        </script>
+        <style>
+            
+           body {
+              
+    background: #A7A9AC;
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(.34, rgba(230,237,241,.05)),
+        color-stop(.67, rgba(230,237,241,0)));
+    -webkit-background-size: 5px 5px;
+}
+
+/*.con{
+    padding-left:50px;
+    position: absolute;
+    top: 40%;
+    left:50%;
+}
+.con1{
+    position: absolute;
+    top: 50%;
+    left:50%;
+}*/
+
+        .txt{
+            align-items:center;
+      text-align:center;
+    display: inline-block;
+    width: 75px;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+    transition: all 0.1s ease-out;
+}
+
+#pagegradient {
+  background-image:
+        -webkit-gradient(
+            radial, 
+            50% -50, 
+            300, 
+            50% 0, 
+            0, 
+            from(rgba(230, 237, 241, 0)), 
+            to(rgba(230, 237, 241, 0.8)));
+    
+  height:100%;
+  left:0px;
+  position:absolute;
+  top:0;
+  width: 600px;
+}
+
+.btn-class {
+    position: absolute;
+    top:60%;
+    left: 50%;
+    display: inline-block;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 10px;
+    
+    -webkit-box-shadow: 
+        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+    
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+} 
+
+.btn-class span {
+    background-color: #E8E8E8;
+    
+    background-image: 
+        /* gloss gradient */
+        -webkit-gradient(
+            linear, 
+            left bottom, 
+            left top, 
+            color-stop(50%,rgba(255,255,255,0)), 
+            color-stop(50%,rgba(255,255,255,0.3)), 
+            color-stop(100%,rgba(255,255,255,0.2))),
+        
+        /* dark outside gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(210,210,210,0.3)), 
+            color-stop(20%,rgba(210,210,210,0)), 
+            color-stop(80%,rgba(210,210,210,0)), 
+            color-stop(100%,rgba(210,210,210,0.3))),
+        
+        /* light inner gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(20%,rgba(255,255,255,0.5)), 
+            color-stop(80%,rgba(255,255,255,0.5)), 
+            color-stop(100%,rgba(255,255,255,0))),        
+        
+        /* diagonal line pattern */
+        -webkit-gradient(
+            linear, 
+            0% 100%, 
+            100% 0%, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(40%,rgba(255,255,255,0)), 
+            color-stop(40%,#D2D2D1), 
+            color-stop(60%,#D2D2D1), 
+            color-stop(60%,rgba(255,255,255,0)), 
+            color-stop(100%,rgba(255,255,255,0)));
+    
+        -webkit-box-shadow:
+            0px -1px #fff, /* top highlight */
+            0px 1px 1px #FFFFFF; /* bottom edge */
+    
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+    
+    -webkit-border-radius: 10px;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    
+    display: inline-block;
+   padding: 10px 40px 10px 40px;
+    
+    color: #3A474D;
+    text-transform: uppercase;
+    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+    font-weight: 700;
+    font-size: 32px;
+    
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
+}
+
+        .btn-class span:hover {
+            color: #AEBF3B;
+            text-shadow: 0px -1px #97A63A;
+            cursor: pointer;
+        }
+
+        .btn-class:active {
+            -webkit-box-shadow: 
+                0px 3px rgba(128,128,128,1),
+                0px 4px rgba(118,118,118,1),
+                0px 5px rgba(108,108,108,1),
+                0px 6px rgba(98,98,98,1),
+                0px 7px rgba(88,88,88,1),
+                0px 8px rgba(78,78,78,1),
+                0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+        }
+
+        .btn-class:active span{
+            -webkit-transform: translate(0, 5px); /* depth of button press */
+        }
+
+    .btn-class span:after {
+        
+        display: block;
+        width: 20px;
+        height: 20px;
+    
+        position: absolute;
+        right: 14px;
+        top: 12px;    
+        
+        font-family: 'Cabin';
+        font-weight: 700;
+        color: #AEBF3B;
+        text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+        font-size: 26px;
+    }
+  --------------------------------------------------------------------------------------
+
+   
+   .txt1{
+            align-items:center;
+      text-align:center;
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px 10px 10px 10px;
+    transition: all 0.1s ease-out;
+}
+
+#pagegradient {
+  background-image:
+        -webkit-gradient(
+            radial, 
+            50% -50, 
+            300, 
+            50% 0, 
+            0, 
+            from(rgba(230, 237, 241, 0)), 
+            to(rgba(230, 237, 241, 0.8)));
+    
+  height:100%;
+  left:0px;
+  position:absolute;
+  top:0;
+  width: 600px;
+}
+
+.btn-class1 {
+
+
+    position: absolute;
+    top:60%;
+    left: 50%;
+    display: inline-block;
+    margin: 0 auto;
+    
+    -webkit-border-radius: 10px;
+    
+    -webkit-box-shadow: 
+        0px 3px rgba(128,128,128,1), /* gradient effects */
+        0px 4px rgba(118,118,118,1),
+        0px 5px rgba(108,108,108,1),
+        0px 6px rgba(98,98,98,1),
+        0px 7px rgba(88,88,88,1),
+        0px 8px rgba(78,78,78,1),
+        0px 14px 6px -1px rgba(128,128,128,1); /* shadow */
+    
+    -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+} 
+
+.btn-class1 span {
+    background-color: #E8E8E8;
+    
+    background-image: 
+        /* gloss gradient */
+        -webkit-gradient(
+            linear, 
+            left bottom, 
+            left top, 
+            color-stop(50%,rgba(255,255,255,0)), 
+            color-stop(50%,rgba(255,255,255,0.3)), 
+            color-stop(100%,rgba(255,255,255,0.2))),
+        
+        /* dark outside gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(210,210,210,0.3)), 
+            color-stop(20%,rgba(210,210,210,0)), 
+            color-stop(80%,rgba(210,210,210,0)), 
+            color-stop(100%,rgba(210,210,210,0.3))),
+        
+        /* light inner gradient */
+        -webkit-gradient(
+            linear, 
+            left top, 
+            right top, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(20%,rgba(255,255,255,0.5)), 
+            color-stop(80%,rgba(255,255,255,0.5)), 
+            color-stop(100%,rgba(255,255,255,0))),        
+        
+        /* diagonal line pattern */
+        -webkit-gradient(
+            linear, 
+            0% 100%, 
+            100% 0%, 
+            color-stop(0%,rgba(255,255,255,0)), 
+            color-stop(40%,rgba(255,255,255,0)), 
+            color-stop(40%,#D2D2D1), 
+            color-stop(60%,#D2D2D1), 
+            color-stop(60%,rgba(255,255,255,0)), 
+            color-stop(100%,rgba(255,255,255,0)));
+    
+        -webkit-box-shadow:
+            0px -1px #fff, /* top highlight */
+            0px 1px 1px #FFFFFF; /* bottom edge */
+    
+    -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+    
+    -webkit-border-radius: 10px;
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    
+    display: inline-block;
+    padding: 2px 2px 2px 2px;
+    
+    color: #3A474D;
+    text-transform: uppercase;
+    font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
+    font-weight: 700;
+    font-size: 32px;
+    
+    text-shadow: 0px 1px #fff, 0px -1px #262F33;
+}
+
+        .btn-class1 span:hover {
+            color: #AEBF3B;
+            text-shadow: 0px -1px #97A63A;
+            cursor: pointer;
+        }
+
+        .btn-class1:active {
+            -webkit-box-shadow: 
+                0px 3px rgba(128,128,128,1),
+                0px 4px rgba(118,118,118,1),
+                0px 5px rgba(108,108,108,1),
+                0px 6px rgba(98,98,98,1),
+                0px 7px rgba(88,88,88,1),
+                0px 8px rgba(78,78,78,1),
+                0px 10px 2px 0px rgba(128,128,128,.6); /* shadow */
+        }
+
+        .btn-class1:active span{
+            -webkit-transform: translate(0, 5px); /* depth of button press */
+        }
+
+    .btn-class1 span:after {
+        
+        display: block;
+        width: 10px;
+        height: 10px;
+    
+        position: absolute;
+        right: 14px;
+        top: 12px;    
+        
+        font-family: 'Cabin';
+        font-weight: 700;
+        color: #AEBF3B;
+        text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+        font-size: 26px;
+    }
+
+  #alo{
+      position:absolute;
+      left:110px;
+      top:70px;
+
+  }
+ 
+ .con1 {
+      position:absolute;
+      left:100px;
+      top:120px;
+
+  }
+  #alo1{
+      position:absolute;
+      left:70px;
+      top:200px;
+
+  }
+  /*#alo2{
+      position:absolute;
+      left:630px;
+      top:500px;
+
+  }*/
+
+  #but
+  {
+
+      width: 35px;
+	height: 35px;
+	font-size: 0;
+	background-color: red;
+	border: 0;
+	border-radius: 35px;
+	   position:absolute;
+      left:240px;
+      top:370px;
+
+  }
+        </style>
+    </head>
+    <body >
+       
+            <div id="pagegradient"></div>
+
+            <div id="alo"  class="nm con"  > استغفر الله </div>
+            <br />
+            <input  type="text" class="txt con1" id="num" value="0" readonly />
+            <br />
+
+            <a id="alo1" class="btn-class" onclick="coun()">
+                <span> تسبيح </span>
+            </a>
+
+            <br />
+           
+          
+        <c id="but" class="btn-class1" onclick="res()">
+           
+        </c>
+</body>
+</html>
